@@ -124,6 +124,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/doc/content/[19]删除链表的倒数第 N 个结点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn19" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.kt" />
+              <option name="titleSlug" value="remove-nth-node-from-end-of-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[1]两数之和.kt">
           <value>
             <LeetcodeEditor>
@@ -179,6 +190,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[22]括号生成.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/doc/content/[22]括号生成.md" />
+              <option name="frontendQuestionId" value="leetcode.cn22" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[22]括号生成.kt" />
+              <option name="titleSlug" value="generate-parentheses" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[234]回文链表.kt">
           <value>
             <LeetcodeEditor>
@@ -212,6 +234,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[31]下一个排列.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/doc/content/[31]下一个排列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn31" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[31]下一个排列.kt" />
+              <option name="titleSlug" value="next-permutation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[338]比特位计数.kt">
           <value>
             <LeetcodeEditor>
@@ -220,6 +253,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[338]比特位计数.kt" />
               <option name="titleSlug" value="counting-bits" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[33]搜索旋转排序数组.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/doc/content/[33]搜索旋转排序数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn33" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/cn/[33]搜索旋转排序数组.kt" />
+              <option name="titleSlug" value="search-in-rotated-sorted-array" />
             </LeetcodeEditor>
           </value>
         </entry>
