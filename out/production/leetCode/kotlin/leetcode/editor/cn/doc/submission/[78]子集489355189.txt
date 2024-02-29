@@ -1,0 +1,20 @@
+    class Solution {
+        fun subsets(nums: IntArray): List<List<Int>> {
+            var sum = 1 shl nums.size
+            val ans = ArrayList<List<Int>>()
+            for (i in 0 until  sum) {
+                val list = ArrayList<Int>()
+                for (n in 0 until nums.size) {
+                    var bitNum = 1 shl n
+                    if (bitNum and i == bitNum) {
+                        list.add(nums[n])
+                    }
+                }
+                ans.add(list)
+            }
+            return ans
+        }
+    }
+
+//runtime:188 ms
+//memory:36.8 MB

@@ -1,0 +1,49 @@
+    class Trie() {
+
+        val trie = Array<Trie?>(26) { null }
+        val trieCharEnd = Array<Boolean>(26) { false }
+        val trieChar = Array<Boolean>(26) { false }
+
+        fun insert(word: String) {
+            if (word.length == 1) {
+                trieCharEnd[word[0] - 'a'] = true
+                trieChar[word[0] - 'a'] = true
+            } else {
+                val index = word[0] - 'a'
+                trieChar[index] = true
+                (trie[index]?: run {
+                    Trie().also { trie[index] = it }
+                }).insert(word.substring(1, word.length))
+            }
+        }
+
+        fun search(word: String): Boolean {
+            if (word.length == 1) {
+                return trieCharEnd[word[0] - 'a']
+            } else {
+                val index = word[0] - 'a'
+                return trie[index]?.search(word.substring(1, word.length)) ?: false
+            }
+        }
+
+        fun startsWith(prefix: String): Boolean {
+            if (prefix.length == 1) {
+                return trieChar[prefix[0] - 'a']
+            } else {
+                val index = prefix[0] - 'a'
+                return trie[index]?.startsWith(prefix.substring(1, prefix.length)) ?: false
+            }
+        }
+
+    }
+
+    /**
+     * Your Trie object will be instantiated and called as such:
+     * var obj = Trie()
+     * obj.insert(word)
+     * var param_2 = obj.search(word)
+     * var param_3 = obj.startsWith(prefix)
+     */
+
+//runtime:432 ms
+//memory:68.8 MB

@@ -1,0 +1,38 @@
+    class Solution {
+        fun threeSum(nums: IntArray): List<List<Int>> {
+            var ans = ArrayList<ArrayList<Int>>()
+            //从小到大排序
+            Arrays.sort(nums)
+            for (index in 0 .. nums.size - 3) {
+                if (index > 0 && nums[index] == nums[index - 1]) {
+                    continue
+                }
+                var left = index + 1
+                var right = nums.size - 1
+                while (left < right) {
+                    if (left > index + 1 && nums[left] == nums[left - 1]) {
+                        left++
+                    } else if (right < nums.size - 1 && nums[right] == nums[right + 1]) {
+                        right--
+                    } else {
+                        if (nums[index] + nums[left] + nums[right] == 0) {
+                            ans.add(ArrayList<Int>().apply {
+                                this.add(nums[index])
+                                this.add(nums[left])
+                                this.add(nums[right])
+                            })
+                            left++
+                        } else if (nums[index] + nums[left] + nums[right] > 0) {
+                            right--
+                        } else {
+                            left++
+                        }
+                    }
+                }
+            }
+            return ans
+        }
+    }
+
+//runtime:456 ms
+//memory:50.8 MB

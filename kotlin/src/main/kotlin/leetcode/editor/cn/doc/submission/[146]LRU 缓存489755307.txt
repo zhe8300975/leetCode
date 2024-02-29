@@ -1,0 +1,72 @@
+    class LRUCache(var capacity: Int) {
+        var size = 0
+        var head=BothNode(-1,-1)
+        var last=BothNode(-1,-1).apply {
+            head.last=this
+            this.pre=head
+        }
+        var map=HashMap<Int,BothNode>()
+        fun get(key: Int): Int {
+            return map.get(key)?.let {node->
+                //断
+                node.pre?.last=node.last
+                node.last?.pre=node.pre
+                //添加
+                node.last=head.last
+                head.last?.pre=node
+                node.pre=head
+                head.last=node
+                node.value
+            }?:-1
+        }
+
+        fun put(key: Int, value: Int) {
+            map.get(key)?.let {node->
+
+                node.value=value
+                //断
+                node.pre?.last=node.last
+                node.last?.pre=node.pre
+                //添加
+                node.last=head.last
+                head.last?.pre=node
+                node.pre=head
+                head.last=node
+                node.value
+            }?:run {
+                val node=BothNode(key,value)
+                //添加
+                node.last=head.last
+                head.last?.pre=node
+                node.pre=head
+                head.last=node
+                node.value
+                size++
+                map.put(key,node)
+            }
+
+            if(size>capacity){
+                val node=last.pre
+                node?.pre?.last=last
+                node?.last?.pre=node?.pre
+                map.remove(node?.key)
+                size--
+            }
+        }
+
+    }
+
+    class BothNode(var key:Int,var value: Int){
+        var pre:BothNode?=null
+        var last:BothNode?=null
+    }
+
+    /**
+     * Your LRUCache object will be instantiated and called as such:
+     * var obj = LRUCache(capacity)
+     * var param_1 = obj.get(key)
+     * obj.put(key,value)
+     */
+
+//runtime:1092 ms
+//memory:140.8 MB

@@ -1,0 +1,60 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+ if (head == null || head.next == null) {
+            return true;
+        }
+        ListNode middleNode = endOfFirstHalf(head);
+        ListNode reversalNode = reversalList(middleNode.next);
+        middleNode.next = reversalNode;
+        boolean result = true;
+        while (head != null && reversalNode != null) {
+            if (head.val != reversalNode.val) {
+                result = false;
+                break;
+            }
+            head = head.next;
+            reversalNode = reversalNode.next;
+        }
+        middleNode.next = reversalList(middleNode.next);
+        return result;
+    }
+     public  ListNode reversalList(ListNode head) {
+        // if (head.next == null) {
+        //     return head;
+        // } else {
+        //     ListNode result = reversalList(head.next);
+        //     head.next.next = head;
+        //     head.next = null;
+        //     return result;
+        // }
+          ListNode pre = head;
+        ListNode newHead = null;
+        while (pre != null) {
+            ListNode next = pre.next;
+            pre.next = newHead;
+            newHead = pre;
+            pre = next;
+        }
+        return newHead;
+    }
+
+    public  ListNode endOfFirstHalf(ListNode head) {
+        ListNode fastNode = head;
+        ListNode slowNode = head;
+        while (fastNode.next != null && fastNode.next.next != null) {
+            slowNode = slowNode.next;
+            fastNode = fastNode.next.next;
+        }
+        return slowNode;
+    }
+}
+//runtime:2 ms
+//memory:41.3 MB

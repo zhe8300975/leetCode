@@ -1,0 +1,28 @@
+    class Solution {
+        fun sortColors(nums: IntArray): Unit {
+            var whiteIndex = 0
+            var blueIndex = 0
+            nums.forEachIndexed { index, value ->
+                if(value==0){
+                    swipe(nums,blueIndex,index)
+                    swipe(nums,blueIndex,whiteIndex)
+                    whiteIndex++
+                    blueIndex++
+                }else if(value==1){
+                    swipe(nums,index,blueIndex)
+                    blueIndex++
+                }
+            }
+
+
+        }
+
+        fun swipe(nums: IntArray, left:Int,right:Int) {
+            val value=nums[left]
+            nums[left]=nums[right]
+            nums[right]=value
+        }
+    }
+
+//runtime:160 ms
+//memory:34.3 MB

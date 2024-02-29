@@ -1,0 +1,19 @@
+class Solution {
+    public int rob(int[] nums) {
+        int []dp=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            if(i==0){
+                dp[i]=nums[0];
+            }else if (i==1){
+                dp[i]=Math.max(nums[i],dp[i-1]);
+            }else {
+                dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+            }
+        }
+        return dp[nums.length-1];
+
+    }
+}
+
+//runtime:0 ms
+//memory:36 MB

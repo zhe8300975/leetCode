@@ -1,0 +1,28 @@
+    class Solution {
+        public int[][] merge(int[][] intervals) {
+            Arrays.sort(intervals, new Comparator<int[]>() {
+                @Override
+                public int compare(int[] o1, int[] o2) {
+                    return o1[0] - o2[0];
+                }
+            });
+            List<int[]> ans = new ArrayList<>();
+            for (int[] item : intervals) {
+                if (ans.size() == 0) {
+                    ans.add(item);
+                } else {
+                    int[] ints = ans.get(ans.size() - 1);
+                    if (item[0] >= ints[0] && item[0] <= ints[1]) {
+                        ints[1] = Math.max(ints[1], item[1]);
+                    } else {
+                        ans.add(item);
+                    }
+                }
+            }
+            return ans.toArray(new int[ans.size()][]);
+
+        }
+    }
+
+//runtime:7 ms
+//memory:40.9 MB

@@ -1,0 +1,21 @@
+class Solution {
+    fun groupAnagrams(strs: Array<String>): List<List<String>> {
+        val ans= ArrayList<List<String>>()
+        val hashMap= HashMap<String,ArrayList<String>>()
+        strs.forEach { str->
+            val key=String(str.toCharArray().apply { this.sort() })
+            if(hashMap.containsKey(key)){
+                hashMap[key]?.add(str)
+            }else{
+                hashMap[key]=ArrayList<String>().apply { this.add(str) }
+            }
+        }
+        hashMap.values.forEach {value->
+            ans.add(value)
+        }
+        return ans
+    }
+}
+
+//runtime:292 ms
+//memory:44.4 MB

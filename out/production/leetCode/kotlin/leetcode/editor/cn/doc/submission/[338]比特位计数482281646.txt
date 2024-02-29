@@ -1,0 +1,26 @@
+    class Solution {
+//    fun countBits(n: Int): IntArray {
+//        var ans=IntArray(n+1)
+//        var highBit = 0
+//        for(num in 1..n){
+//            if(num and (num-1)==0){
+//                highBit=num
+//            }
+//            ans[num]=ans[num-highBit]+1
+//        }
+//        return ans
+//
+//    }
+
+        fun countBits(n: Int): IntArray {
+            var ans = IntArray(n + 1) { 0 }
+            for (num in 0..n) {
+                ans[num] = ans[num shr 1] + (num and 1)
+            }
+            return ans
+        }
+
+    }
+
+//runtime:188 ms
+//memory:37.3 MB

@@ -1,0 +1,54 @@
+    class Solution {
+        fun exist(board: Array<CharArray>, word: String): Boolean {
+            for (m in 0 until board.size) {
+                for (n in 0 until board[0].size) {
+                    if (exist(
+                            board,
+                            m,
+                            n,
+                            Array(board.size) { Array<Boolean>(board[0].size) { false } }, word, 0
+                        )
+                    ) {
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+
+        fun exist(
+            board: Array<CharArray>,
+            m: Int,
+            n: Int,
+            path: Array<Array<Boolean>>,
+            word: String,
+            index: Int
+        ): Boolean {
+            var exist = false
+            if(!path[m][n]&&board[m][n]==word[index]) {
+                path[m][n]=true
+                if(index==word.length-1){
+                    exist=true
+                }
+                if (m > 0  && !exist) {
+                    exist = exist(board, m - 1, n, path, word, index + 1)
+                }
+                if (m < board.size - 1 && !exist) {
+                    exist = exist(board, m + 1, n, path, word, index + 1)
+                }
+
+                if (n > 0 && !exist) {
+                    exist = exist(board, m, n - 1, path, word, index + 1)
+                }
+                if (n < board[0].size - 1 && !exist) {
+                    exist = exist(board, m, n + 1, path, word, index + 1)
+                }
+                path[m][n]=false
+            }
+            return exist
+
+        }
+    }
+
+//runtime:292 ms
+//memory:33.3 MB

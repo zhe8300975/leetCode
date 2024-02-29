@@ -1,0 +1,17 @@
+class Solution {
+    fun canJump(nums: IntArray): Boolean {
+        var i=0
+        var max=0
+        while(i<=max){
+            if(i==nums.size-1){
+                return true
+            }
+            max=Math.max(max,nums[i]+i)
+            i++
+        }
+        return false
+    }
+}
+
+//runtime:328 ms
+//memory:41.6 MB

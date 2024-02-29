@@ -1,0 +1,58 @@
+    /**
+     * Example:
+     * var li = ListNode(5)
+     * var v = li.`val`
+     * Definition for singly-linked list.
+     * class ListNode(var `val`: Int) {
+     *     var next: ListNode? = null
+     * }
+     */
+    class Solution {
+        fun sortList(head: ListNode?): ListNode? {
+            if (head == null || head.next == null) {
+                return head
+            }
+            var slow = head
+            var fast = head.next
+            while (fast != null && fast.next != null) {
+                slow = slow!!.next
+                fast = fast!!.next!!.next
+            }
+            val right = slow!!.next
+            slow!!.next = null
+
+
+            return mergeList(sortList(head), sortList(right))
+
+        }
+
+
+        //合并list
+        fun mergeList(left: ListNode?, right: ListNode?): ListNode? {
+            val ans = ListNode(-1)
+            var pre = ans
+            var preLeft: ListNode? = left
+            var preRight: ListNode? = right
+            while (preLeft != null && preRight != null) {
+                if (preLeft.`val` <= preRight.`val`) {
+                    pre.next = preLeft
+                    preLeft = preLeft.next
+                } else {
+                    pre.next = preRight
+                    preRight = preRight.next
+                }
+                pre = pre.next!!
+            }
+            if (preLeft != null) {
+                pre.next = preLeft
+            }
+            if (preRight != null) {
+                pre.next = preRight
+            }
+            return ans.next
+        }
+
+    }
+
+//runtime:372 ms
+//memory:47.6 MB

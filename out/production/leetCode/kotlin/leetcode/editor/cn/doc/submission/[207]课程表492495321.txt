@@ -1,0 +1,34 @@
+    class Solution {
+        fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
+            //没门课程需要的前置个数
+            val dp = Array<Int>(numCourses){0}
+            val list = Array<ArrayList<Int>>(numCourses) { ArrayList() }
+            val queue = LinkedList<Int>()
+            for (array in prerequisites) {
+                dp[array[0]]++
+                list[array[1]].add(array[0])
+            }
+            dp.forEachIndexed { index, value ->
+                if (value == 0) {
+                    queue.add(index)
+                }
+
+            }
+            while (queue.isNotEmpty()) {
+                val value = queue.removeFirst()
+                list[value].forEach {
+                    if (--dp[it] == 0) {
+                        queue.add(it)
+                    }
+                }
+            }
+
+            dp.forEach { if (it != 0) return false }
+            return true
+
+
+        }
+    }
+
+//runtime:204 ms
+//memory:45.1 MB

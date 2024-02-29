@@ -1,0 +1,36 @@
+    class Solution {
+        fun searchRange(nums: IntArray, target: Int): IntArray {
+            return intArrayOf(findLeft(nums, target), findRight(nums, target))
+        }
+
+        fun findLeft(nums: IntArray, target: Int): Int {
+            var left = 0;
+            var right = nums.size - 1
+            while (left < right) {
+                var mid = (left + right) / 2
+                if (nums[mid] >= target) {
+                    right = mid
+                } else {
+                    left = mid + 1
+                }
+            }
+            return if (right == left && nums[left] == target) left else -1
+        }
+
+        fun findRight(nums: IntArray, target: Int): Int {
+            var left = 0;
+            var right = nums.size - 1
+            while (left < right) {
+                var mid = (left + right) / 2 + 1
+                if (nums[mid] <= target) {
+                    left = mid
+                } else {
+                    right = mid - 1
+                }
+            }
+            return if (right == left && nums[left] == target) right else -1
+        }
+    }
+
+//runtime:200 ms
+//memory:37.8 MB

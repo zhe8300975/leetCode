@@ -1,0 +1,16 @@
+class Solution {
+    fun majorityElement(nums: IntArray): Int {
+        var ans=0
+        var sum=0
+        for(num :Int in nums ){
+            if(sum==0){
+                ans=num
+            }
+            sum+=if(num==ans) 1 else -1
+        }
+        return ans
+    }
+}
+
+//runtime:232 ms
+//memory:40.4 MB

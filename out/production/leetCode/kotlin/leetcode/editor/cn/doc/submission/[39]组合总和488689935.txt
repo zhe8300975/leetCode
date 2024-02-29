@@ -1,0 +1,43 @@
+    class Solution {
+        fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
+            val ans = ArrayList<List<Int>>()
+            combinationSum(candidates.sortedArrayDescending(), 0, target, ans, ArrayList())
+            return ans
+        }
+
+        fun combinationSum(
+            candidates: IntArray,
+            index: Int,
+            target: Int,
+            ans: ArrayList<List<Int>>,
+            path: ArrayList<Int>
+        ) {
+            if (target == 0) {
+                ans.add(ArrayList(path))
+                return
+            }
+            if (target < 0 || index >= candidates.size) {
+                return
+            }
+
+            for (i in 0..Int.MAX_VALUE) {
+                if (target < i * candidates[index]) {
+                    break
+                }
+                for (num in 1..i) {
+                    path.add(candidates[index])
+                }
+                combinationSum(candidates, index + 1, target - i * candidates[index], ans, path)
+                for (num in 1..i) {
+                    path.remove(candidates[index])
+                }
+
+
+            }
+
+        }
+
+    }
+
+//runtime:240 ms
+//memory:42.6 MB

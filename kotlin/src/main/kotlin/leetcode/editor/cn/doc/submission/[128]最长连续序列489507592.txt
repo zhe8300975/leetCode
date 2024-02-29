@@ -1,0 +1,25 @@
+class Solution {
+    fun longestConsecutive(nums: IntArray): Int {
+        val set=HashSet<Int>()
+        var ans=0
+        for(num in nums){
+            set.add(num)
+        }
+        for (num in nums){
+            if(!set.contains(num-1)){
+                var n=num
+                var length=0
+                while(set.contains(n)){
+                    length+=1
+                    n+=1
+                }
+                ans=Math.max(ans,length)
+            }
+        }
+        return ans
+
+    }
+}
+
+//runtime:972 ms
+//memory:57.5 MB

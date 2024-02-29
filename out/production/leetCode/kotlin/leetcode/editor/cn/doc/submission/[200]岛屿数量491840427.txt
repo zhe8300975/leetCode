@@ -1,0 +1,37 @@
+    class Solution {
+        fun numIslands(grid: Array<CharArray>): Int {
+            var sum = 0
+            for (x in 0 until grid.size) {
+                for (y in 0 until grid[0].size) {
+                    if (checklands(x, y, grid)) {
+                        sum++
+                    }
+                }
+            }
+            return sum
+
+        }
+
+        fun checklands(x: Int, y: Int, grid: Array<CharArray>): Boolean {
+            if (grid[x][y] == '1') {
+                grid[x][y] = '0'
+                if (x > 0 && grid[x - 1][y] == '1') {
+                    checklands(x - 1, y, grid)
+                }
+                if (y > 0 && grid[x][y - 1] == '1') {
+                    checklands(x, y - 1, grid)
+                }
+                if (x < grid.size - 1 && grid[x + 1][y] == '1') {
+                    checklands(x + 1, y, grid)
+                }
+                if (y < grid[0].size - 1 && grid[x][y + 1] == '1') {
+                    checklands(x, y + 1, grid)
+                }
+                return true
+            }
+            return false
+        }
+    }
+
+//runtime:212 ms
+//memory:44.1 MB

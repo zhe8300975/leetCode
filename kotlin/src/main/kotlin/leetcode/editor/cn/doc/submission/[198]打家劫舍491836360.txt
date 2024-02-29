@@ -1,0 +1,34 @@
+    class Solution {
+//    fun rob(nums: IntArray): Int {
+//        var dp=IntArray(nums.size)
+//        var ans=0
+//        nums.forEachIndexed{
+//            index, value ->
+//            if(index==0||index==1){
+//                dp[index]=value
+//            }else{
+//                dp[index]=value+ Math.max(dp[index-2],dp.getOrElse(index-3) { 0 })
+//            }
+//            ans=Math.max(ans,dp[index])
+//        }
+//        return ans
+//    }
+
+        fun rob(nums: IntArray): Int {
+            val dp = IntArray(nums.size)
+            nums.forEachIndexed { index, value ->
+                if (index == 0) {
+                    dp[index] = value
+                } else {
+                    dp[index] = Math.max(dp[index - 1], value + dp.getOrElse(index - 2) { 0 })
+                }
+            }
+            return dp[nums.size - 1]
+
+        }
+
+
+    }
+
+//runtime:156 ms
+//memory:36.3 MB

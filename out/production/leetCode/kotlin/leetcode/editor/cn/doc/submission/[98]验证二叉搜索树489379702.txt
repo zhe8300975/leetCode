@@ -1,0 +1,28 @@
+/**
+ * Example:
+ * var ti = TreeNode(5)
+ * var v = ti.`val`
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: Int) {
+ *     var left: TreeNode? = null
+ *     var right: TreeNode? = null
+ * }
+ */
+class Solution {
+    fun isValidBST(root: TreeNode?): Boolean {
+        return  isValidBST(root,Long.MAX_VALUE,Long.MIN_VALUE)
+    }
+
+    fun isValidBST(root: TreeNode?,max:Long,min:Long):Boolean{
+        if(root==null){
+            return true
+        }
+        if(root.`val`>min&&root.`val`<max){
+            return isValidBST(root.left,root.`val`.toLong(),min)&&isValidBST(root.right,max,root.`val`.toLong())
+        }
+        return  false
+    }
+}
+
+//runtime:208 ms
+//memory:36.4 MB
