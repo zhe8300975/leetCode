@@ -1,0 +1,27 @@
+class Solution {
+    fun merge(intervals: Array<IntArray>): Array<IntArray> {
+        intervals.sortWith(Comparator { o1, o2 ->
+            if (o1[0]==o2[0]){
+                return@Comparator o1[1]-o2[1]
+            }
+            return@Comparator o1[0]-o2[0] })
+        var ans=ArrayList<IntArray>()
+        intervals.forEach { item->
+            if(ans.isNotEmpty()){
+                var last=ans.get(ans.size-1)
+                if(last[0]<=item[0]&&last[1]>=item[1]){
+                    return@forEach
+                }
+                if(last[0]<=item[0]&&last[1]>=item[0]&&item[1]>last[0]){
+                    ans.get(ans.size-1)[1]=item[1]
+                    return@forEach
+                }
+            }
+            ans.add(intArrayOf(item[0],item[1]))
+        }
+        return ans.toTypedArray()
+    }
+}
+
+//runtime:309 ms
+//memory:49.1 MB

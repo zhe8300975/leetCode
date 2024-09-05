@@ -1,0 +1,19 @@
+    class Solution {
+        fun findTargetSumWays(nums: IntArray, target: Int): Int {
+            return findTargetSumWays(nums, 0, target)
+        }
+
+        fun findTargetSumWays(nums: IntArray, index: Int, target: Int): Int {
+            if (index == nums.size) {
+                return if (target == 0) 1 else 0
+            }
+            return findTargetSumWays(nums, index + 1, target - nums[index]) + findTargetSumWays(
+                nums,
+                index + 1,
+                target + nums[index]
+            )
+        }
+    }
+
+//runtime:552 ms
+//memory:33.4 MB

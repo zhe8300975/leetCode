@@ -1,0 +1,33 @@
+    class Solution {
+        fun canPartition(nums: IntArray): Boolean {
+            var sum = 0
+            nums.forEach { item -> sum += item }
+            if(sum%2!=0||nums.size<2){
+                return false
+            }
+            var targe=sum/2
+            var dp=Array<BooleanArray>(nums.size){ BooleanArray(targe+1) }
+            for(i in 0 until nums.size){
+                dp[i][0]=true
+            }
+            if(nums[0]<=targe){
+                dp[0][nums[0]]=true
+            }else{
+                return false
+            }
+            for(i in 1 until nums.size){
+                var num=nums[i]
+                for(j in 1 .. targe){
+                    if(j>=num){
+                        dp[i][j]=dp[i-1][j]||dp[i-1][j-num]
+                    }else{
+                        dp[i][j]=dp[i-1][j]
+                    }
+                }
+            }
+            return dp[nums.size-1][targe]
+        }
+    }
+
+//runtime:234 ms
+//memory:39.8 MB

@@ -1,0 +1,26 @@
+    /**
+     * Example:
+     * var ti = TreeNode(5)
+     * var v = ti.`val`
+     * Definition for a binary tree node.
+     * class TreeNode(var `val`: Int) {
+     *     var left: TreeNode? = null
+     *     var right: TreeNode? = null
+     * }
+     */
+    class Solution {
+        var sum = 0
+        fun convertBST(root: TreeNode?): TreeNode? {
+            root?.let {
+                convertBST(it.right)
+                sum += it.`val`
+                it.`val` = sum
+                convertBST(it.left)
+            }
+            return root
+        }
+
+    }
+
+//runtime:216 ms
+//memory:39.2 MB

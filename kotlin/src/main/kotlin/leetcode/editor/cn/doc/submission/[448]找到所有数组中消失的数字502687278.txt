@@ -1,0 +1,20 @@
+class Solution {
+    fun findDisappearedNumbers(nums: IntArray): List<Int> {
+        nums.forEach {
+            var index=Math.abs(it)
+            if(nums[index-1]>0){
+                nums[index-1]*=-1
+            }
+        }
+        var ans=ArrayList<Int>()
+        nums.forEachIndexed { index, i ->
+            if(i>0){
+                ans.add(index+1)
+            }
+        }
+        return ans
+    }
+}
+
+//runtime:323 ms
+//memory:45.1 MB

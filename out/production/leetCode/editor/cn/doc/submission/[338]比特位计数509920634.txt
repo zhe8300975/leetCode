@@ -1,0 +1,16 @@
+class Solution {
+    fun countBits(n: Int): IntArray {
+        var ans =IntArray(n+1)
+        for(i in 0 .. n){
+            if(i<2){
+                ans[i]=i
+            }else{
+                ans[i]=ans[i shr 1]+ (i%2)
+            }
+        }
+        return ans
+    }
+}
+
+//runtime:173 ms
+//memory:38.2 MB

@@ -1,0 +1,31 @@
+/**
+ * Example:
+ * var ti = TreeNode(5)
+ * var v = ti.`val`
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: Int) {
+ *     var left: TreeNode? = null
+ *     var right: TreeNode? = null
+ * }
+ */
+class Solution {
+    fun rob(root: TreeNode?): Int {
+        val dp=robDp(root)
+        return Math.max(dp.first,dp.second)
+
+    }
+
+    fun robDp(root: TreeNode?):Pair<Int,Int>{//偷  不偷
+        if(root==null){
+            return Pair(0,0)
+        }
+        var left=robDp(root.left)
+        var right=robDp(root.right)
+        val a=(left.second)+(right.second)+root.`val`
+        val b=Math.max(left.first,left.second)+Math.max(right.first,right.second)
+        return Pair(a,b)
+    }
+}
+
+//runtime:204 ms
+//memory:36.5 MB

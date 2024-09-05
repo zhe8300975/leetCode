@@ -1,0 +1,43 @@
+    /**
+     * Example:
+     * var ti = TreeNode(5)
+     * var v = ti.`val`
+     * Definition for a binary tree node.
+     * class TreeNode(var `val`: Int) {
+     *     var left: TreeNode? = null
+     *     var right: TreeNode? = null
+     * }
+     */
+    class Solution {
+        fun rob(root: TreeNode?): Int {
+            if (root == null) {
+                return 0
+            }
+            var dp_done = HashMap<TreeNode, Int>()
+            var dp_none = HashMap<TreeNode, Int>()
+            rob(root, dp_done, dp_none)
+            return Math.max(dp_done.getOrDefault(root, 0), dp_none.getOrDefault(root, 0))
+        }
+
+        fun rob(root: TreeNode, dp_done: HashMap<TreeNode, Int>, dp_none: HashMap<TreeNode, Int>) {
+            if (root.left == null && root.right == null) {
+                dp_done.put(root, root.`val`)
+                dp_none.put(root, 0)
+                return
+            }
+            root.left?.let {
+                rob(it, dp_done, dp_none)
+            }
+            root.right?.let {
+                rob(it, dp_done, dp_none)
+            }
+
+            dp_done.put(root, root.`val` + dp_none.getOrDefault(root.left, 0)+dp_none.getOrDefault(root.right, 0))
+            dp_none.put(root, Math.max(dp_none.getOrDefault(root.left, 0), dp_done.getOrDefault(root.left, 0))
+                    +Math.max(dp_none.getOrDefault(root.right, 0), dp_done.getOrDefault(root.right, 0)))
+
+        }
+    }
+
+//runtime:203 ms
+//memory:37.2 MB

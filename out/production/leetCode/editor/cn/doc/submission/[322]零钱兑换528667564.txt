@@ -1,0 +1,24 @@
+class Solution {
+    fun coinChange(coins: IntArray, amount: Int): Int {
+        var  dp=IntArray(amount){Int.MAX_VALUE}
+        for(i in 1 .. amount){
+            coins.forEach { item->
+                if(i-item==0){
+                    dp[i-1]=1
+                }else if(i-item>0&&dp[i-item-1]!= Int.MAX_VALUE){
+                    dp[i-1]=Math.min(dp[i-1],dp[i-item-1]+1)
+                }
+            }
+        }
+        return dp[amount-1]
+    }
+}
+
+//total_testcases:189
+//total_correct:1
+//input_formatted:[2]
+3
+//expected_output:-1
+//code_output:2147483647
+//last_testcase:[2]
+3

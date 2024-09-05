@@ -1,0 +1,20 @@
+    class Solution {
+        fun subarraySum(nums: IntArray, k: Int): Int {
+            var sum = IntArray(nums.size + 1) { 0 }
+            nums.forEachIndexed { index, value ->
+                sum[index + 1] = sum[index] + value
+            }
+            var ans=0
+            for (end in 1 .. nums.size) {
+                for (start in 0 until end) {
+                    if(sum[end]-sum[start]==k){
+                        ans++
+                    }
+                }
+            }
+            return ans
+        }
+    }
+
+//runtime:1792 ms
+//memory:41 MB

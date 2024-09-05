@@ -1,0 +1,22 @@
+class Solution {
+    fun topKFrequent(nums: IntArray, k: Int): IntArray {
+        val frequent=HashMap<Int,Int>()
+        nums.forEach { value->
+            var num=frequent.getOrDefault(value,0)
+            frequent.put(value,++num)
+        }
+        val queue=PriorityQueue<Int>(compareBy {key->frequent.get(key)  })
+        frequent.keys.forEach { key->queue.offer(key) }
+        for(i in 1..queue.size-k){
+            queue.poll()
+        }
+        val ans=ArrayList<Int>()
+        while (!queue.isEmpty()){
+            ans.add(queue.poll())
+        }
+        return ans.toIntArray()
+    }
+}
+
+//runtime:264 ms
+//memory:41.9 MB

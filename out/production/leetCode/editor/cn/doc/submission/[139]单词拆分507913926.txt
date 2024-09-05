@@ -1,0 +1,17 @@
+    class Solution {
+        fun wordBreak(s: String, wordDict: List<String>): Boolean {
+            var dp = BooleanArray(s.length + 1)
+            dp[0] = true
+            for (end in 1..s.length) {
+                for (start in 0 until end) {
+                    if (dp[start] && wordDict.contains(s.substring(start, end))) {
+                        dp[end] = true
+                    }
+                }
+            }
+            return dp[s.length]
+        }
+    }
+
+//runtime:163 ms
+//memory:36.2 MB

@@ -1,0 +1,23 @@
+class Solution {
+    fun merge(intervals: Array<IntArray>): Array<IntArray> {
+        Arrays.sort(intervals) { item1, item2 ->
+            if(item1[0]!=item2[0]){
+                return@sort item1[0]-item2[0]
+            }else{
+                return@sort item1[1]-item2[1]
+            }
+        }
+        var ans=ArrayList<IntArray>()
+        intervals.forEach {item->
+            if(ans.isNotEmpty()&&ans.last()[0]<=item[0]&&ans.last()[1]>=item[0]){
+                ans.last()[1]=Math.max(ans.last()[1],item[1])
+            }else{
+                ans.add(item)
+            }
+        }
+        return ans.toTypedArray()
+    }
+}
+
+//runtime:310 ms
+//memory:48.6 MB

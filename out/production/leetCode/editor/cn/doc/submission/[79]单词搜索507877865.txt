@@ -1,0 +1,42 @@
+    class Solution {
+        fun exist(board: Array<CharArray>, word: String): Boolean {
+            for(x in 0 until  board.size){
+                for(y in 0 until board[0].size){
+                    if(exist(board,x,y, Array(board.size){BooleanArray(board[0].size)},word,0)){
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+
+        fun exist(board: Array<CharArray>, x: Int, y: Int, used: Array<BooleanArray>, word: String, wordIndex: Int): Boolean {
+            var exist = false
+            if (board[x][y] == word[wordIndex]) {
+                used[x][y] = true
+                if (wordIndex == word.length - 1) {
+                    exist = true
+                }
+
+                if (!exist && x > 0 && !used[x - 1][y]) {
+                    exist = exist || exist(board, x - 1, y, used, word, wordIndex + 1)
+                }
+                if (!exist && x < board.size - 1 && !used[x + 1][y]) {
+                    exist = exist || exist(board, x + 1, y, used, word, wordIndex + 1)
+                }
+                if (!exist && y > 0 && !used[x][y - 1]) {
+                    exist = exist || exist(board, x, y - 1, used, word, wordIndex + 1)
+                }
+                if (!exist && y < board[0].size - 1 && !used[x][y + 1]) {
+                    exist = exist || exist(board, x, y + 1, used, word, wordIndex + 1)
+                }
+                used[x][y] = false
+
+            }
+            return exist
+
+        }
+    }
+
+//runtime:338 ms
+//memory:35.5 MB

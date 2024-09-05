@@ -1,0 +1,23 @@
+    class Solution {
+        fun longestConsecutive(nums: IntArray): Int {
+            var set = HashSet<Int>()
+            var ans = 0
+            nums.forEach { item -> set.add(item) }
+            nums.forEach { item ->
+                if (!set.contains(item + 1)) {
+                    var num = 0
+                    var pre = item
+
+                    while (set.contains(pre)) {
+                        pre--
+                        num++
+                    }
+                    ans = Math.max(ans, num)
+                }
+            }
+            return ans
+        }
+    }
+
+//runtime:445 ms
+//memory:55.2 MB

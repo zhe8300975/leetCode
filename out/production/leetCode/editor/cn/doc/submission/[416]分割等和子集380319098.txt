@@ -1,0 +1,32 @@
+class Solution {
+    public boolean canPartition(int[] nums) {
+        int sum = 0;
+            for (int i : nums) {
+                sum += i;
+            }
+            if (sum % 2 != 0) {
+                return false;
+            }
+            boolean []dp=new boolean[sum/2+1];
+            dp[0]=true;
+            for(int i:nums){
+
+
+                    for(int j=sum/2;j>=0;j--){
+                        if(!dp[j]){
+                            if(j-i>0&&dp[j-i]){
+                                dp[j]=true;
+                            }
+                        }
+
+                }
+                if(i<=sum/2){
+                    dp[i]=true;
+                }
+
+            }
+            return dp[sum/2];
+    }
+}
+//runtime:15 ms
+//memory:40.8 MB

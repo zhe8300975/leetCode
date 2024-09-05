@@ -1,0 +1,49 @@
+/**
+ * Example:
+ * var li = ListNode(5)
+ * var v = li.`val`
+ * Definition for singly-linked list.
+ * class ListNode(var `val`: Int) {
+ *     var next: ListNode? = null
+ * }
+ */
+class Solution {
+    fun isPalindrome(head: ListNode?): Boolean {
+        var fast:ListNode?=ListNode(-1).apply {
+            this.next=head
+        }
+        var slow=fast
+        while(fast?.next!=null){
+            fast=fast?.next?.next
+            slow=slow?.next
+        }
+        reset(slow)
+        var list2=slow?.next
+        var list1=head
+        while(list2!=null){
+            if(list1?.`val`!=list2.`val`){
+                return false
+            }
+            list1=list1.next
+            list2=list2.next
+        }
+        return true
+
+    }
+
+
+    fun reset(head: ListNode?){
+        var pre=head?.next
+        head?.next=null
+        while(pre!=null){
+            var node=pre
+            pre=pre.next
+
+            node.next=head?.next
+            head?.next=node
+        }
+    }
+}
+
+//runtime:486 ms
+//memory:56.6 MB

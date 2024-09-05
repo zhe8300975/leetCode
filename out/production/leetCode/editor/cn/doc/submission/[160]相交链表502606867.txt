@@ -1,0 +1,32 @@
+/**
+ * Example:
+ * var li = ListNode(5)
+ * var v = li.`val`
+ * Definition for singly-linked list.
+ * class ListNode(var `val`: Int) {
+ *     var next: ListNode? = null
+ * }
+ */
+
+class Solution {
+    fun getIntersectionNode(headA: ListNode?, headB:ListNode?):ListNode? {
+        var node1=headA
+        var node2=headB
+        while (node1!=node2){
+           if(node1==null){
+               node1=headB
+           }else{
+               node1=node1.next
+           }
+            if(node2==null){
+                node2=headA
+            }else{
+                node2=node2.next
+            }
+        }
+        return node1
+    }
+}
+
+//runtime:169 ms
+//memory:38.2 MB

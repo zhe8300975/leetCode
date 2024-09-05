@@ -1,0 +1,16 @@
+    class Solution {
+        fun subarraySum(nums: IntArray, k: Int): Int {
+           var map=HashMap<Int,Int>().apply { this.put(0,1) }
+            var ans=0
+            var sum=0
+            nums.forEach { value->
+                sum+=value
+                ans+=map.getOrDefault(sum-k,0)
+                map.put(sum,map.getOrDefault(sum,0)+1)
+            }
+            return ans
+        }
+    }
+
+//runtime:308 ms
+//memory:39.6 MB

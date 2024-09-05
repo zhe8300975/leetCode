@@ -1,0 +1,27 @@
+class Solution {
+    fun maxCoins(nums: IntArray): Int {
+        var n = nums.size
+        var rec = Array(n + 2) { IntArray(n + 2) }
+        var v = IntArray(n + 2)
+        v[0] = 1
+        v[n + 1] = 1
+
+        for (i in 1..n) {
+            v[i] = nums[i - 1]
+        }
+
+        for(i in n-1 downTo 0){
+            for(j in i+2 .. n+1){
+                for(k in i+1 until  j ){
+                    var  sum=v[i]*v[k]*v[j]
+                    sum+=rec[i][k]+rec[k][j]
+                    rec[i][j]=Math.max(rec[i][j],sum)
+                }
+            }
+        }
+        return rec[0][n+1]
+    }
+}
+
+//runtime:185 ms
+//memory:36.2 MB

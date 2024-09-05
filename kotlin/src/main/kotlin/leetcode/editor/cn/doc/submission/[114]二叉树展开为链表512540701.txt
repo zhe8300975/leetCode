@@ -1,0 +1,35 @@
+    /**
+     * Example:
+     * var ti = TreeNode(5)
+     * var v = ti.`val`
+     * Definition for a binary tree node.
+     * class TreeNode(var `val`: Int) {
+     *     var left: TreeNode? = null
+     *     var right: TreeNode? = null
+     * }
+     */
+    class Solution {
+        fun flatten(root: TreeNode?): Unit {
+            if(root==null){
+                return 
+            }
+            var stack = LinkedList<TreeNode>()
+            stack.addLast(root)
+            var pre: TreeNode? = null
+            while (stack.isNotEmpty()) {
+                var node = stack.removeLast()
+                node.right?.let { stack.addLast(it) }
+                node.left?.let { stack.addLast(it) }
+                node.left = null
+                pre?.let {
+                    it.right = node
+                }
+                pre = node
+            }
+        }
+
+
+    }
+
+//runtime:161 ms
+//memory:34.9 MB

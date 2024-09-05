@@ -1,0 +1,32 @@
+    class Solution {
+        fun findKthLargest(nums: IntArray, k: Int): Int {
+            return findKthLargest(nums,0,nums.size-1,k)
+        }
+
+        fun findKthLargest(nums: IntArray, start: Int, end: Int, k: Int):Int {
+            var pre = start
+            val num = nums[end]
+            for (index in start..end) {
+                if (nums[index] < num) {
+                    swipe(nums,pre++,index)
+                }
+            }
+            swipe(nums,pre,end)
+            if(pre==nums.size-k){
+                return nums[pre]
+            }else if(pre>nums.size-k){
+                return findKthLargest(nums,start,pre-1,k)
+            }else{
+                return findKthLargest(nums,pre+1,end,k)
+            }
+        }
+
+        fun swipe(nums: IntArray, x: Int, y: Int) {
+            val num = nums[x]
+            nums[x] = nums[y]
+            nums[y] = num
+        }
+    }
+
+//runtime:2540 ms
+//memory:58.1 MB

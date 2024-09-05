@@ -1,0 +1,34 @@
+    class Solution {
+        fun isValid(s: String): Boolean {
+            var stack = LinkedList<Char>()
+            s.forEach { item ->
+                when (item) {
+                    '(', '[', '{' -> {
+                        stack.addLast(item)
+                    }
+
+                    ')' -> {
+                        if (stack.isEmpty() || stack.removeLast() != '(') {
+                            return false
+                        }
+                    }
+
+                    ']' -> {
+                        if (stack.isEmpty() || stack.removeLast() != '[') {
+                            return false
+                        }
+                    }
+
+                    '}' -> {
+                        if (stack.isEmpty() || stack.removeLast() != '{') {
+                            return false
+                        }
+                    }
+                }
+            }
+            return stack.isEmpty()
+        }
+    }
+
+//runtime:142 ms
+//memory:33.3 MB

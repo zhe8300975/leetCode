@@ -1,0 +1,18 @@
+class Solution {
+    fun minPathSum(grid: Array<IntArray>): Int {
+        var dp=IntArray(grid[0].size){0}
+        for(x in 0 until grid.size){
+            for(y in 0 until grid[0].size){
+                if(x==0){
+                    dp[y]=grid[x][y]+dp.getOrElse(y-1) { 0 }
+                }else{
+                    dp[y]=grid[x][y]+if(y==0) dp[y] else Math.min(dp[y],dp[y-1])
+                }
+            }
+        }
+        return dp[grid[0].size-1]
+    }
+}
+
+//runtime:210 ms
+//memory:43.2 MB

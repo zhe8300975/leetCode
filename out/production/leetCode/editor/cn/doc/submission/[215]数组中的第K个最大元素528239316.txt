@@ -1,0 +1,15 @@
+class Solution {
+    fun findKthLargest(nums: IntArray, k: Int): Int {
+        var queue=PriorityQueue<Int>(Comparator { o1, o2 -> o2-o1 })
+        nums.forEach { item->
+            queue.offer(item)
+        }
+        for(i in 1 until  k){
+            queue.poll()
+        }
+        return queue.peek()
+    }
+}
+
+//runtime:433 ms
+//memory:51.6 MB

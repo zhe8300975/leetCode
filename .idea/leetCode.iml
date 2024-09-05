@@ -3,10 +3,14 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/kotlin/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kotlin/src/main/kotlin/data" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kotlin/src/main/kotlin/leetcode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kotlin/src/main/java/leetcode/editor/cn" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kotlin/src/main/factory" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="jetbrains.kotlinx.coroutines.core" level="project" />
   </component>
 </module>

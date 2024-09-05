@@ -1,0 +1,30 @@
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer,Integer> hashMap=new HashMap<>();
+        for(int num:nums){
+            hashMap.put(num,hashMap.getOrDefault(num,0)+1);
+        }
+        int[][] list=new int[hashMap.size()][2];
+        int index=0;
+        for(Map.Entry<Integer,Integer> item:hashMap.entrySet()){
+            list[index][0]=item.getValue();
+            list[index][1]=item.getKey();
+            index++;
+        }
+        Arrays.sort(list, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o2[0]-o1[0];
+            }
+        });
+        int []ans=new int[k];
+        for(int i=0;i<k;i++){
+            ans[i]=list[i][1];
+        }
+        return ans;
+
+    }
+}
+
+//runtime:13 ms
+//memory:41.2 MB

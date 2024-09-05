@@ -1,0 +1,23 @@
+    class Solution {
+        fun topKFrequent(nums: IntArray, k: Int): IntArray {
+            var map = HashMap<Int, Int>()
+            nums.forEach { item ->
+                if (map.containsKey(item)) {
+                    map[item] = map[item]!! + 1
+                } else {
+                    map[item] = 1
+                }
+            }
+
+            var priorityQueue = PriorityQueue<Int>({ o1, o2 ->
+                return@PriorityQueue map.getOrDefault(o2, 0) - map.getOrDefault(o1, 0)
+            })
+            map.keys.forEach { item -> priorityQueue.add(item) }
+            return IntArray(k) { priorityQueue.remove() }
+        }
+
+
+    }
+
+//runtime:274 ms
+//memory:40.8 MB

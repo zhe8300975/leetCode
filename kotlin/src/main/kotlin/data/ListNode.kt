@@ -1,5 +1,6 @@
 package data
 
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
+class ListNode(   @JvmField var `val`: Int) {
+    @JvmField
+    public var next: ListNode? = null
 }

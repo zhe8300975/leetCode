@@ -1,0 +1,24 @@
+class Solution {
+    fun findAnagrams(s: String, p: String): List<Int> {
+        var tager=getTarget(p)
+        var end=p.length-1
+        var ans=ArrayList<Int>()
+        while(end<s.length){
+            var car=getTarget(s.substring(end-p.length+1,end+1))
+            if(car.equals(tager)){
+                ans.add(end-p.length+1)
+            }
+            end++
+        }
+        return ans
+    }
+
+        fun getTarget(str:String):String{
+            var charList=str.toCharArray()
+            Arrays.sort(charList)
+            return String(charList)
+        }
+}
+
+//runtime:1811 ms
+//memory:39.7 MB

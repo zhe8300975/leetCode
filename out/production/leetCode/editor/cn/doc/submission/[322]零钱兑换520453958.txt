@@ -1,0 +1,26 @@
+class Solution {
+    fun coinChange(coins: IntArray, amount: Int): Int {
+        var dp=IntArray(amount+1){-1}
+        dp[0]=0
+       for(i in 1 .. amount){
+           if(coins.contains(i)){
+               dp[i]=1
+           }else{
+               coins.forEach { item->
+                   if(i-item>0&&dp[i-item]>0){
+                       dp[i]=if(dp[i]!=-1){
+                           Math.min(dp[i],dp[i-item]+1)
+                       }else{
+                           dp[i-item]+1
+                       }
+                   }
+               }
+           }
+
+       }
+        return dp[amount]
+    }
+}
+
+//runtime:192 ms
+//memory:36.9 MB

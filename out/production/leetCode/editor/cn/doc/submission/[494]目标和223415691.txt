@@ -1,0 +1,22 @@
+class Solution {
+    public int findTargetSumWays(int[] nums, int target) {
+        int [][] dp=new int[nums.length][2001];
+        for(int i=0;i<nums.length;i++){
+            if(i==0){
+                dp[0][1000+nums[0]]+=1;
+                dp[0][1000-nums[0]]+=1;
+            }else{
+                for(int index=0;index<2001;index++){
+                    if(dp[i-1][index]>0){
+                        dp[i][index+nums[i]]+=dp[i-1][index];
+                        dp[i][index-nums[i]]+=dp[i-1][index];
+                    }
+                }
+            }
+        }
+        return dp[nums.length-1][1000+target];
+        
+    }
+}
+//runtime:12 ms
+//memory:38.1 MB

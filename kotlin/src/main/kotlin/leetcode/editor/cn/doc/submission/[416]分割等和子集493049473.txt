@@ -1,0 +1,22 @@
+class Solution {
+    fun canPartition(nums: IntArray): Boolean {
+        val sum=nums.sum()
+        if(sum%2!=0){
+            return false
+        }
+        var target=sum/2
+        var dp=BooleanArray(target+1)
+        dp[0]=true
+        nums.forEach {
+            for(i in target downTo 0){
+                if(i-it>=0&&dp[i-it]){
+                    dp[i]=true
+                }
+            }
+        }
+        return dp[target]
+    }
+}
+
+//runtime:208 ms
+//memory:37.7 MB

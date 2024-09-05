@@ -1,0 +1,35 @@
+    class Solution {
+        fun findKthLargest(nums: IntArray, k: Int): Int {
+            var start = 0
+            var end = nums.size - 1
+            while (true) {
+                var pre = start
+                for (index in start until end) {
+                    if (nums[index] < nums[end]) {
+                        swipe(nums, index, pre++)
+                    }
+                }
+                swipe(nums, pre, end)
+                if (pre == nums.size - k) {
+                    return nums[pre]
+                }else if(pre>nums.size-k){
+                    end=pre-1
+                }else{
+                    start=pre+1
+                }
+            }
+            return -1
+
+        }
+
+
+        fun swipe(nums: IntArray, index1: Int, index2: Int) {
+            var num = nums[index1]
+            nums[index1] = nums[index2]
+            nums[index2 ]= num
+        }
+
+    }
+
+//runtime:3652 ms
+//memory:55.8 MB

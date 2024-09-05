@@ -1,0 +1,32 @@
+class Solution {
+    fun minDistance(word1: String, word2: String): Int {
+        var dp=Array<IntArray>(word1.length){IntArray(word2.length)}
+        for(x in 0 until word1.length){
+            for(y in 0 until word2.length){
+                if(x==0&&y==0){
+                    dp[x][y]=if(word1[x]==word2[y]) 0 else 0
+                }else if(y>x||x>y){
+                    if(x==0){
+                        dp[x][y]=dp[x][y-1]+1
+                    }else if(y==0){
+                        dp[x][y]=dp[x-1][y]+1
+                    }else{
+                        dp[x][y]=Math.min(dp[x-1][y],dp[x][y-1])+1
+                    }
+                }else{
+                    if(word1[x]==word2[y]){
+                        dp[x][y]=Math.min(dp[x-1][y-1],Math.min(dp[x-1][y],dp[x][y-1]))
+                    }else{
+                        dp[x][y]=Math.min(dp[x-1][y-1],Math.min(dp[x-1][y],dp[x][y-1]))+1
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//total_correct:0
+//compile_error:Line 26: Char 5: error: a 'return' expression required in a function with a block body ('{...}')
+    }
+    ^

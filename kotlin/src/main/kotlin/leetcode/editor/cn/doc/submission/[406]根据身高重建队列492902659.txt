@@ -1,0 +1,28 @@
+    class Solution {
+        fun reconstructQueue(people: Array<IntArray>): Array<IntArray> {
+            Arrays.sort(people, Comparator { o1, o2 ->
+                if (o1[0] == o2[0]) {
+                    return@Comparator o2[1] - o1[1]
+                }
+                return@Comparator o1[0] - o2[0]
+            })
+            val ans = Array(people.size) { IntArray(2) { -1 } }
+            people.forEach {
+                var n = 0
+                for (i in 0 until people.size) {
+                    if (ans[i][0] == -1) {
+                        if (n < it[1]) {
+                            n++
+                        } else {
+                            ans[i] = it
+                            break
+                        }
+                    }
+                }
+            }
+            return ans
+        }
+    }
+
+//runtime:364 ms
+//memory:47 MB

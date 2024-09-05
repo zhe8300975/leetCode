@@ -1,0 +1,21 @@
+class Solution {
+    fun leastInterval(tasks: CharArray, n: Int): Int {
+        val dp=IntArray(26)
+        var max=0
+        tasks.forEach { item->
+            dp[item-'A']++
+            max=Math.max(max, dp[item-'A'])
+        }
+        var num=0
+        dp.forEach { item->
+            if(max==item ){
+                num++
+            }
+        }
+
+        return Math.max(tasks.size,(max-1)*(n+1)+num)
+    }
+}
+
+//runtime:248 ms
+//memory:38.7 MB

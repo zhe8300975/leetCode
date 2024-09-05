@@ -1,0 +1,17 @@
+class Solution {
+    fun dailyTemperatures(temperatures: IntArray): IntArray {
+        var ans=IntArray(temperatures.size)
+        var stack=LinkedList<Int>()
+        temperatures.forEachIndexed{index, value ->
+            while(stack.isNotEmpty()&&temperatures[stack.last]<value){
+                var i=stack.removeLast()
+                ans[i]=(index-i)
+            }
+            stack.add(index)
+        }
+        return ans
+    }
+}
+
+//runtime:548 ms
+//memory:49.4 MB

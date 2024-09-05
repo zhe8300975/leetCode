@@ -1,0 +1,16 @@
+class Solution {
+    fun numTrees(n: Int): Int {
+        var dp=IntArray(n+1)
+        dp[0]=1
+        dp[1]=1
+        for(i in 2 ..n){
+            for(left in 0 until i){
+                dp[i]+=dp[left]*dp[i-1-left]
+            }
+        }
+        return dp[n]
+    }
+}
+
+//runtime:138 ms
+//memory:32.4 MB

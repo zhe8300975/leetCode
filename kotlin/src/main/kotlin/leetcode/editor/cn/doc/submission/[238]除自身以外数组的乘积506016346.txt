@@ -1,0 +1,18 @@
+class Solution {
+    fun productExceptSelf(nums: IntArray): IntArray {
+        var ans=IntArray(nums.size)
+        ans[0]=1
+        for(index in 1 until nums.size){
+            ans[index]=ans[index-1]*nums[index-1]
+        }
+        var pre=1
+        for(index in nums.size-2 downTo 0){
+            pre=pre*nums[index+1]
+            ans[index]=ans[index]*pre
+        }
+        return ans
+    }
+}
+
+//runtime:285 ms
+//memory:47 MB

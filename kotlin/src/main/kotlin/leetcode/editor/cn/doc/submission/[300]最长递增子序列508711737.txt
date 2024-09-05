@@ -1,0 +1,19 @@
+class Solution {
+    fun lengthOfLIS(nums: IntArray): Int {
+        var dp=IntArray(nums.size){1}
+        var ans=1
+        for(index in 1 until nums.size){
+            for(i in 0 until index){
+                if(nums[index]>nums[i]) {
+                    dp[index] = Math.max(dp[index],dp[i]+1)
+                }
+            }
+            ans=Math.max(ans,dp[index])
+        }
+        return ans
+
+    }
+}
+
+//runtime:276 ms
+//memory:38.3 MB

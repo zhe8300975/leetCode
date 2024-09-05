@@ -1,0 +1,25 @@
+    class Solution {
+        fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
+            var ans=ArrayList<List<Int>>()
+            combinationSum(candidates,target,0,ArrayList(),ans)
+            return ans
+        }
+
+        fun combinationSum(candidates: IntArray, target: Int,index:Int, path: ArrayList<Int>, ans: ArrayList<List<Int>>) {
+            if(target==0){
+                ans.add(ArrayList(path))
+                return
+            }
+            if(target>0){
+                for(i in index until candidates.size){
+                    path.add(candidates[i])
+                    combinationSum(candidates,target-candidates[i],i,path,ans)
+                    path.removeAt(path.size-1)
+                }
+            }
+        }
+
+    }
+
+//runtime:199 ms
+//memory:36.7 MB

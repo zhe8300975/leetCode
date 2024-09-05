@@ -3,6 +3,149 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[11]盛最多水的容器.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[11]盛最多水的容器.md" />
+              <option name="frontendQuestionId" value="leetcode.cn11" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[11]盛最多水的容器.kt" />
+              <option name="titleSlug" value="container-with-most-water" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[15]三数之和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[15]三数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn15" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[15]三数之和.kt" />
+              <option name="titleSlug" value="3sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[15]三数之和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[15]三数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn15" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[15]三数之和.java" />
+              <option name="titleSlug" value="3sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[17]电话号码的字母组合.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[17]电话号码的字母组合.md" />
+              <option name="frontendQuestionId" value="leetcode.cn17" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[17]电话号码的字母组合.java" />
+              <option name="titleSlug" value="letter-combinations-of-a-phone-number" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[19]删除链表的倒数第 N 个结点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn19" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java" />
+              <option name="titleSlug" value="remove-nth-node-from-end-of-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[20]有效的括号.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[20]有效的括号.md" />
+              <option name="frontendQuestionId" value="leetcode.cn20" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[20]有效的括号.java" />
+              <option name="titleSlug" value="valid-parentheses" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[21]合并两个有序链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[21]合并两个有序链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn21" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[21]合并两个有序链表.java" />
+              <option name="titleSlug" value="merge-two-sorted-lists" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[22]括号生成.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[22]括号生成.md" />
+              <option name="frontendQuestionId" value="leetcode.cn22" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[22]括号生成.java" />
+              <option name="titleSlug" value="generate-parentheses" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[31]下一个排列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[31]下一个排列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn31" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[31]下一个排列.java" />
+              <option name="titleSlug" value="next-permutation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[33]搜索旋转排序数组.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[33]搜索旋转排序数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn33" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[33]搜索旋转排序数组.java" />
+              <option name="titleSlug" value="search-in-rotated-sorted-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[34]在排序数组中查找元素的第一个和最后一个位置.md" />
+              <option name="frontendQuestionId" value="leetcode.cn34" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.java" />
+              <option name="titleSlug" value="find-first-and-last-position-of-element-in-sorted-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[39]组合总和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[39]组合总和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn39" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[39]组合总和.java" />
+              <option name="titleSlug" value="combination-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[3]无重复字符的最长子串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[3]无重复字符的最长子串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[3]无重复字符的最长子串.java" />
+              <option name="titleSlug" value="longest-substring-without-repeating-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[101]对称二叉树.kt">
           <value>
             <LeetcodeEditor>
@@ -204,10 +347,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[15]三数之和.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[15]三数之和.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[15]三数之和.md" />
               <option name="frontendQuestionId" value="leetcode.cn15" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[15]三数之和.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[15]三数之和.java" />
               <option name="titleSlug" value="3sum" />
             </LeetcodeEditor>
           </value>
@@ -237,10 +380,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[17]电话号码的字母组合.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[17]电话号码的字母组合.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[17]电话号码的字母组合.md" />
               <option name="frontendQuestionId" value="leetcode.cn17" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[17]电话号码的字母组合.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[17]电话号码的字母组合.java" />
               <option name="titleSlug" value="letter-combinations-of-a-phone-number" />
             </LeetcodeEditor>
           </value>
@@ -259,10 +402,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[19]删除链表的倒数第 N 个结点.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[19]删除链表的倒数第 N 个结点.md" />
               <option name="frontendQuestionId" value="leetcode.cn19" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java" />
               <option name="titleSlug" value="remove-nth-node-from-end-of-list" />
             </LeetcodeEditor>
           </value>
@@ -325,10 +468,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[20]有效的括号.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[20]有效的括号.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[20]有效的括号.md" />
               <option name="frontendQuestionId" value="leetcode.cn20" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[20]有效的括号.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[20]有效的括号.java" />
               <option name="titleSlug" value="valid-parentheses" />
             </LeetcodeEditor>
           </value>
@@ -347,10 +490,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[21]合并两个有序链表.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[21]合并两个有序链表.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[21]合并两个有序链表.md" />
               <option name="frontendQuestionId" value="leetcode.cn21" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[21]合并两个有序链表.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[21]合并两个有序链表.java" />
               <option name="titleSlug" value="merge-two-sorted-lists" />
             </LeetcodeEditor>
           </value>
@@ -380,10 +523,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[22]括号生成.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[22]括号生成.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[22]括号生成.md" />
               <option name="frontendQuestionId" value="leetcode.cn22" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[22]括号生成.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[22]括号生成.java" />
               <option name="titleSlug" value="generate-parentheses" />
             </LeetcodeEditor>
           </value>
@@ -556,11 +699,22 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[31]下一个排列.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[31]下一个排列.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[31]下一个排列.md" />
               <option name="frontendQuestionId" value="leetcode.cn31" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[31]下一个排列.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[31]下一个排列.java" />
               <option name="titleSlug" value="next-permutation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[322]零钱兑换.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[322]零钱兑换.md" />
+              <option name="frontendQuestionId" value="leetcode.cn322" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[322]零钱兑换.kt" />
+              <option name="titleSlug" value="coin-change" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -600,10 +754,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[33]搜索旋转排序数组.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[33]搜索旋转排序数组.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[33]搜索旋转排序数组.md" />
               <option name="frontendQuestionId" value="leetcode.cn33" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[33]搜索旋转排序数组.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[33]搜索旋转排序数组.java" />
               <option name="titleSlug" value="search-in-rotated-sorted-array" />
             </LeetcodeEditor>
           </value>
@@ -622,11 +776,22 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[34]在排序数组中查找元素的第一个和最后一个位置.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[34]在排序数组中查找元素的第一个和最后一个位置.md" />
               <option name="frontendQuestionId" value="leetcode.cn34" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.java" />
               <option name="titleSlug" value="find-first-and-last-position-of-element-in-sorted-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[394]字符串解码.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[394]字符串解码.md" />
+              <option name="frontendQuestionId" value="leetcode.cn394" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[394]字符串解码.kt" />
+              <option name="titleSlug" value="decode-string" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -644,10 +809,10 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[39]组合总和.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[39]组合总和.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[39]组合总和.md" />
               <option name="frontendQuestionId" value="leetcode.cn39" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[39]组合总和.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[39]组合总和.java" />
               <option name="titleSlug" value="combination-sum" />
             </LeetcodeEditor>
           </value>
@@ -655,11 +820,22 @@
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[3]无重复字符的最长子串.kt">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[3]无重复字符的最长子串.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[3]无重复字符的最长子串.md" />
               <option name="frontendQuestionId" value="leetcode.cn3" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[3]无重复字符的最长子串.kt" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[3]无重复字符的最长子串.java" />
               <option name="titleSlug" value="longest-substring-without-repeating-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[406]根据身高重建队列.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[406]根据身高重建队列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn406" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[406]根据身高重建队列.kt" />
+              <option name="titleSlug" value="queue-reconstruction-by-height" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -682,6 +858,28 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[42]接雨水.kt" />
               <option name="titleSlug" value="trapping-rain-water" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[437]路径总和 III.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[437]路径总和 III.md" />
+              <option name="frontendQuestionId" value="leetcode.cn437" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[437]路径总和 III.kt" />
+              <option name="titleSlug" value="path-sum-iii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[438]找到字符串中所有字母异位词.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[438]找到字符串中所有字母异位词.md" />
+              <option name="frontendQuestionId" value="leetcode.cn438" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[438]找到字符串中所有字母异位词.kt" />
+              <option name="titleSlug" value="find-all-anagrams-in-a-string" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -729,6 +927,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[494]目标和.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[494]目标和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn494" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[494]目标和.kt" />
+              <option name="titleSlug" value="target-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[49]字母异位词分组.kt">
           <value>
             <LeetcodeEditor>
@@ -748,6 +957,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[4]寻找两个正序数组的中位数.kt" />
               <option name="titleSlug" value="median-of-two-sorted-arrays" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[538]把二叉搜索树转换为累加树.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[538]把二叉搜索树转换为累加树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn538" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[538]把二叉搜索树转换为累加树.kt" />
+              <option name="titleSlug" value="convert-bst-to-greater-tree" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1001,6 +1221,39 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[98]验证二叉搜索树.kt" />
               <option name="titleSlug" value="validate-binary-search-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[面试题 17.14]最小K个数.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[面试题 17.14]最小K个数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 17.14" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[面试题 17.14]最小K个数.kt" />
+              <option name="titleSlug" value="smallest-k-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/leetcode/editor/cn/[11]盛最多水的容器.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/doc/content/[11]盛最多水的容器.md" />
+              <option name="frontendQuestionId" value="leetcode.cn11" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/kotlin/leetcode/editor/cn/[11]盛最多水的容器.kt" />
+              <option name="titleSlug" value="container-with-most-water" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kotlin/src/main/leetcode/editor/cn/[15]三数之和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/doc/content/[15]三数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn15" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/kotlin/src/main/java/leetcode/editor/cn/[15]三数之和.java" />
+              <option name="titleSlug" value="3sum" />
             </LeetcodeEditor>
           </value>
         </entry>

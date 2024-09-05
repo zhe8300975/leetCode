@@ -1,0 +1,72 @@
+    
+
+    /**
+     * Example:
+     * var ti = TreeNode(5)
+     * var v = ti.`val`
+     * Definition for a binary tree node.
+     * class TreeNode(var `val`: Int) {
+     *     var left: TreeNode? = null
+     *     var right: TreeNode? = null
+     * }
+     */
+    class Solution {
+
+
+
+        fun pathSum(root: TreeNode?, targetSum: Int): Int {
+            val map = HashMap<TreeNode, ArrayList<Long>>()
+            buildMap(root, map)
+            var sum = 0
+            map.forEach { key, value ->
+                sum += value.count { it == targetSum.toLong() }
+            }
+            return sum
+
+        }
+
+        fun buildMap(root: TreeNode?, map: HashMap<TreeNode, ArrayList<Long>>) {
+            if (root == null) {
+                return
+            }
+            buildMap(root.left, map)
+            buildMap(root.right, map)
+            val list = ArrayList<Long>().apply {
+                this.add(root.`val`.toLong())
+                map.get(root.left)?.let {
+                    this.addAll(it.map { item -> item + root.`val` })
+                }
+                map.get(root.right)?.let {
+                    this.addAll(it.map { item -> item + root.`val` })
+                }
+            }
+
+            map.put(root, list)
+        }
+
+
+//        fun buildMap(root: TreeNode?, map: HashMap<TreeNode, ArrayList<Int>>) {
+//            if (root == null) {
+//                return
+//            }
+//            buildMap(root.left, map)
+//            buildMap(root.right, map)
+//            val list = ArrayList<Int>().apply {
+//                this.add(root.`val`)
+//                map.get(root.left)?.let {
+//                    this.addAll(it.filter { item -> !(item > 0 && root.`val` > 0 && item + root.`val` < 0) && !(item < 0 && root.`val` < 0 && item + root.`val` > 0) }
+//                        .map { item -> item + root.`val` })
+//                }
+//                map.get(root.right)?.let {
+//                    this.addAll(it.filter { item -> !(item > 0 && root.`val` > 0 && item + root.`val` < 0) && !(item < 0 && root.`val` < 0 && item + root.`val` > 0) }
+//                        .map { item -> item + root.`val` })
+//                }
+//            }
+//
+//            map.put(root, list)
+//        }
+
+    }
+
+//runtime:492 ms
+//memory:62.9 MB

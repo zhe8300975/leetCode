@@ -1,0 +1,26 @@
+    class Solution {
+        fun permute(nums: IntArray): List<List<Int>> {
+            var ans=ArrayList<List<Int>>()
+            permute(nums, BooleanArray(nums.size), ArrayList(),ans)
+            return ans
+        }
+
+        fun permute(nums: IntArray,dp:BooleanArray ,path: ArrayList<Int>, ans: ArrayList<List<Int>>) {
+            if(nums.size==path.size){
+                ans.add(ArrayList(path))
+                return
+            }
+            for(i in 0 until dp.size){
+                if(!dp[i]){
+                    dp[i]=true
+                    path.add(nums[i])
+                    permute(nums,dp,path,ans)
+                    path.removeAt(path.size-1 )
+                    dp[i]=false
+                }
+            }
+        }
+    }
+
+//runtime:186 ms
+//memory:36.4 MB

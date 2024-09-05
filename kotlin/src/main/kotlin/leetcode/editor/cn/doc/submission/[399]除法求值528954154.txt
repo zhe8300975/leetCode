@@ -1,0 +1,77 @@
+    class Solution {
+        fun calcEquation(equations: List<List<String>>, values: DoubleArray, queries: List<List<String>>): DoubleArray {
+            var queationSize = equations.size
+            var unionFind = UnionFind(2 * queationSize)
+            var map = HashMap<String, Int>(2 * queationSize)
+            var id = 0
+            equations.forEachIndexed { index, strings ->
+                var var1 = strings[0]
+                var var2 = strings[1]
+                if (!map.containsKey(var1)) {
+                    map.put(var1, id++)
+                }
+                if (!map.containsKey(var2)) {
+                    map.put(var2, id++)
+                }
+                unionFind.union(map[var1]!!, map[var2]!!, values[index])
+            }
+
+
+            var queriesSize = queries.size
+            var ans = DoubleArray(queriesSize)
+            queries.forEachIndexed { index, strings ->
+                var id1 = map[strings[0]]
+                var id2 = map[strings[0]]
+                if (id1 == null || id2 == null) {
+                    ans[index] = -1.0
+                } else {
+                    ans[index] = unionFind.isConnected(id1, id2)
+                }
+            }
+            return ans
+        }
+
+        class UnionFind(n: Int) {
+            var parent = IntArray(n) { it }
+            var weight = DoubleArray(n) { 1.0 }
+            fun union(x: Int, y: Int, value: Double) {
+                var rootX = find(x)
+                var rootY = find(y)
+                if (rootY == rootX) {
+                    return
+                }
+                parent[rootX] = rootY
+                weight[rootX] = value / weight[x] * weight[y]
+            }
+
+            fun find(x: Int): Int {
+                if (x != parent[x]) {
+                    var origin = parent[x]
+                    parent[x] = find(origin)
+                    weight[x] *= weight[origin]
+                }
+                return parent[x]
+            }
+
+            fun isConnected(x: Int, y: Int): Double {
+                var rootX = find(x)
+                var rootY = find(y)
+                if (rootY == rootX) {
+                    return weight[x] / weight[y]
+                } else {
+                    return -1.0
+                }
+            }
+        }
+    }
+
+//total_testcases:28
+//total_correct:2
+//input_formatted:[["a","b"],["b","c"]]
+[2.0,3.0]
+[["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+//expected_output:[6.00000,0.50000,-1.00000,1.00000,-1.00000]
+//code_output:[1.00000,1.00000,1.00000,1.00000,-1.00000]
+//last_testcase:[["a","b"],["b","c"]]
+[2.0,3.0]
+[["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]

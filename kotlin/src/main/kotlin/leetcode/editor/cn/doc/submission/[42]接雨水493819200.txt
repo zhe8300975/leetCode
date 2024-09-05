@@ -1,0 +1,25 @@
+class Solution {
+    fun trap(height: IntArray): Int {
+        var leftMax=IntArray(height.size)
+        var rightMax=IntArray(height.size)
+        for(i in 0 until  height.size){
+            leftMax[i]=Math.max(height[i],leftMax.getOrElse(i-1,{0}))
+        }
+        for(i in height.size-1 downTo 0){
+            rightMax[i]=Math.max(height[i],rightMax.getOrElse(i+1,{0}))
+        }
+        var ans=0
+        for( i in 1 .. height.size-2){
+            var h=Math.min(leftMax[i-1],rightMax[i+1])
+            if(h>height[i]){
+                ans+=h-height[i]
+            }
+        }
+        return ans
+
+
+    }
+}
+
+//runtime:224 ms
+//memory:40 MB

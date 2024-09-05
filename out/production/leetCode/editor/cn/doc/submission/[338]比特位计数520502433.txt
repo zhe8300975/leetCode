@@ -1,0 +1,16 @@
+    class Solution {
+        fun countBits(n: Int): IntArray {
+            var dp = IntArray(n + 1)
+            dp[0] = 0
+            if (n > 0) {
+                dp[1] = 1
+                for (index in 2..n) {
+                    dp[index] = dp[index shr 1] + (index and 1)
+                }
+            }
+            return dp
+        }
+    }
+
+//runtime:175 ms
+//memory:37.5 MB

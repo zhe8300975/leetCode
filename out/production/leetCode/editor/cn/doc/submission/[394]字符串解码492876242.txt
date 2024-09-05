@@ -1,0 +1,32 @@
+    class Solution {
+        fun decodeString(s: String): String {
+            var list = LinkedList<Char>()
+            s.forEach { itemChar ->
+                if (itemChar != ']') {
+                    list.addLast(itemChar)
+                } else {
+                    var strBuilder = StringBuilder()
+                    while (list.last != '[') {
+                        strBuilder.append(list.removeLast())
+                    }
+                    list.removeLast()
+                    var num=StringBuilder()
+                    while (list.isNotEmpty()&&list.last - '0' in 0..9) {
+                        num.append(list.removeLast())
+                    }
+                    strBuilder.reverse()
+                    for (i in 1..num.reverse().toString().toInt()) {
+                        list.addAll(strBuilder.toList())
+                    }
+                }
+            }
+            var ans = StringBuilder()
+            while (list.isNotEmpty()) {
+                ans.append(list.removeFirst())
+            }
+            return ans.toString()
+        }
+    }
+
+//runtime:208 ms
+//memory:36.3 MB

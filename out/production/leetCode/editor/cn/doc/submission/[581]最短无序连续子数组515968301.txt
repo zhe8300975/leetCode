@@ -1,0 +1,25 @@
+class Solution {
+    fun findUnsortedSubarray(nums: IntArray): Int {
+        var max=Int.MIN_VALUE
+        var min=Int.MAX_VALUE
+        var right=-1
+        var left=-1
+        nums.forEachIndexed { index, value -> 
+            if(max>value){
+                right=index
+            }else{
+                max=value
+            }
+            
+            if(min<nums[nums.size-1-index]){
+                left=nums.size-1-index
+            }else{
+                min=nums[nums.size-1-index]
+            }
+        }
+        return if(right==-1) 0 else right-left+1
+    }
+}
+
+//runtime:240 ms
+//memory:39.3 MB

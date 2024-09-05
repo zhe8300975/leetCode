@@ -1,0 +1,72 @@
+    class Solution {
+        fun findUnsortedSubarray(nums: IntArray): Int {
+            var max = Int.MIN_VALUE
+            var min = Int.MAX_VALUE
+            var left=-1
+            var right=-1
+            nums.forEachIndexed { index, value -> 
+                if(max>value){
+                    right=index
+                }else{
+                    max=value
+                }
+                
+                if(min<nums[nums.size-1-index]){
+                    left=nums.size-1-index
+                }else{
+                    min=nums[nums.size-1-index]
+                }
+            }
+            return if(right==-1) 0 else right-left+1
+        }
+
+//    fun findUnsortedSubarray(nums: IntArray): Int {
+//       var i= findRight(nums)-findLeft(nums)
+//        return if(i==0) 0 else i+1
+//    }
+//
+//        fun findLeft(nums: IntArray):Int{
+//            var pre=0
+//            for(index in 1 until nums.size){
+//                if(nums[index-1]>nums[index]){
+//                    pre=index
+//                    break
+//                }
+//            }
+//            if(pre==0) return -1
+//            var min=Int.MAX_VALUE
+//            for(index in pre until nums.size){
+//                min=Math.min(min,nums[index])
+//            }
+//
+//            pre=0
+//            while (nums[pre]<=min){
+//                pre++
+//            }
+//            return pre
+//        }
+//
+//        fun findRight(nums: IntArray):Int{
+//            var pre=nums.size-1
+//            for(index in nums.size-2 downTo  0){
+//                if(nums[index+1]<nums[index]){
+//                    pre=index
+//                    break
+//                }
+//            }
+//            if(pre==nums.size-1) return -1
+//            var max=Int.MIN_VALUE
+//            for(index in pre downTo  0){
+//                max=Math.max(max,nums[index])
+//            }
+//
+//            pre=nums.size-1
+//            while (nums[pre]>=max){
+//                pre--
+//            }
+//            return pre
+//        }
+    }
+
+//runtime:262 ms
+//memory:39 MB
